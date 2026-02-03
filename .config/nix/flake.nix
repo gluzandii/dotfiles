@@ -16,6 +16,30 @@
         [ 
           pkgs.neovim
           pkgs.zellij
+          pkgs.dust
+          pkgs.bat
+          pkgs.gh
+          pkgs.bun
+          pkgs.btop
+          pkgs.fd
+          pkgs.fzf
+          pkgs.ffmpeg
+          pkgs.ghostscript
+          pkgs.carapace
+          pkgs.gemini-cli
+          pkgs.go
+          pkgs.delta
+          pkgs.lua
+          pkgs.nodejs
+          pkgs.nushell
+          pkgs.pnpm
+          pkgs.ripgrep
+          pkgs.stow
+          pkgs.surfer
+          pkgs.zoxide
+          pkgs.lazygit
+          pkgs.codex
+          pkgs.starship
         ];
 
       # Necessary for using flakes on this system.
