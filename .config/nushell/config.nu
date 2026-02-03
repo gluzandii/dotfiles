@@ -86,10 +86,6 @@ source ./zoxide/init.nu
 
 source ./completions/zellij.nu
 
-alias nvim = lvim
-alias vim = lvim
-alias vi = lvim
-
 $env.config.keybindings = [
   {
     name: delete_word_backward
