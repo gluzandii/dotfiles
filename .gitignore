@@ -1,0 +1,16 @@
+*
+!.gitignore
+
+!.config/
+
+!.config/lvim
+!.config/lvim/**
+
+!.config/nushell
+!.config/nushell/**
+
+
+!.config/zellij
+!.config/zellij/**
+
+!.config/starship.toml
