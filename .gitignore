@@ -14,3 +14,7 @@
 !.config/zellij/**
 
 !.config/starship.toml
+
+!.config/nix
+!.config/nix/**
+
