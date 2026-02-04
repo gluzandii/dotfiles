@@ -25,6 +25,10 @@
           pkgs.raycast
           pkgs.spotify
           pkgs.docker
+          pkgs.podman
+          pkgs.podman-desktop
+          pkgs.podman-compose
+          pkgs.colima
 
           pkgs.mkalias
           pkgs.neovim
