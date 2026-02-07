@@ -102,3 +102,5 @@ $env.config.keybindings = [
     event: { edit: cutfromstart }
   }
 ]
+alias less = bat
+alias cat  = bat --paging=never

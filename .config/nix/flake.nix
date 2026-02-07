@@ -5,11 +5,13 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nix-darwin.url = "github:nix-darwin/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+    nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew }:
   let
     configuration = { pkgs, config, ... }: {
+      system.primaryUser = "sushi";
       nixpkgs.config.allowUnfree = true;
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
@@ -56,6 +58,31 @@
           pkgs.codex
           pkgs.starship
         ];
+
+        homebrew = {
+            enable = true;
+            casks = [
+                "aldente"
+                "chatgpt"
+                "docker-desktop"
+                "ghostty"
+                "graalvm-jdk@21"
+                "linearmouse"
+                "lm-studio"
+                "minecraft"
+                "nordvpn"
+                "signal"
+                "visual-studio-code"
+            ];
+            brews = [
+                "supabase"
+                "llvm@18"
+                "lua"
+                "luarocks"
+                "icarus-verilog"
+            ];
+            onActivation.cleanup = "zap";
+        };
 
       fonts.packages = [
         pkgs.lilex 
@@ -105,7 +132,18 @@ in
     # Build darwin flake using:
     # $ darwin-rebuild build --flake .#simple
     darwinConfigurations."sushi-mac" = nix-darwin.lib.darwinSystem {
-      modules = [ configuration ];
+      modules = [ 
+        configuration 
+        nix-homebrew.darwinModules.nix-homebrew
+        {
+            nix-homebrew = {
+                enable = true;
+                enableRosetta = true;
+                user = "sushi";
+                autoMigrate = true;
+            };
+        }
+    ];
     };
 
     darwinPackages = self.darwinConfigurations."sushi-mac".packages;
