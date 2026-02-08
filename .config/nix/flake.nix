@@ -80,7 +80,17 @@
                 "lua"
                 "luarocks"
                 "icarus-verilog"
+                "mas"
             ];
+            masApps = {
+                "WhatsApp Messenger" = 310633997;
+                "Goodnotes: AI Notes, Docs, PDF" = 1444383602;
+                "Microsoft Word" = 462054704;
+                "Microsoft Excel" = 462058435;
+                "Microsoft PowerPoint" = 462062816;
+                "Xcode" = 497799835;
+                "AdGuard Mini" = 1440147259;
+            };
             onActivation.cleanup = "zap";
         };
 
