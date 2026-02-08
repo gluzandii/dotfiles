@@ -89,9 +89,10 @@
                 "Microsoft Excel" = 462058435;
                 "Microsoft PowerPoint" = 462062816;
                 "Xcode" = 497799835;
-                "AdGuard Mini" = 1440147259;
             };
             onActivation.cleanup = "zap";
+            onActivation.autoUpdate = true;
+            onActivation.upgrade = true;
         };
 
       fonts.packages = [
@@ -119,6 +120,24 @@ in
     ${pkgs.mkalias}/bin/mkalias "$src" "/Applications/Nix Apps/$app_name"
   done
       '';
+
+      system.defaults = {
+        dock.persistent-apps = [
+            "/System/Applications/Phone.app"
+            "/Applications/Safari.app"
+            "/Applications/WhatsApp.app"
+            "/Applications/Signal.app"
+            "/System/Applications/Reminders.app"
+            "/System/Applications/Mail.app"
+            "/System/Applications/iPhone Mirroring.app"
+            "${pkgs.chatgpt}/Applications/ChatGPT.app"
+            "/Applications/Ghostty.app"
+        ];
+        finder.FXPreferredViewStyle = "clmv";
+        loginwindow.GuestEnabled = false;
+        NSGlobalDomain.AppleInterfaceStyle = "Dark";
+        NSGlobalDomain.KeyRepeat = 2;
+      };
 
 
       # Necessary for using flakes on this system.
