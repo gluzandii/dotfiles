@@ -18,3 +18,9 @@
 !.config/nix
 !.config/nix/**
 
+!.config/btop
+!.config/btop/**
+
+!.config/gh
+!.config/gh/**
+
