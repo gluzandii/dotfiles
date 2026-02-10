@@ -50,7 +50,6 @@
           pkgs.lua
           pkgs.nodejs
           pkgs.nushell
-          pkgs.pnpm
           pkgs.ripgrep
           pkgs.stow
           pkgs.surfer
