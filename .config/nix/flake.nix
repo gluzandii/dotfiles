@@ -19,7 +19,6 @@
         [ 
           pkgs.aldente
           pkgs.brave
-          pkgs.discord
           pkgs.chatgpt
           pkgs.gitkraken
           pkgs.iina
