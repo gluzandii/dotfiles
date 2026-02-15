@@ -32,7 +32,6 @@
 
           pkgs.mkalias
           pkgs.neovim
-          pkgs.zellij
           pkgs.dust
           pkgs.bat
           pkgs.gh
@@ -63,7 +62,6 @@
             casks = [
                 "aldente"
                 "chatgpt"
-                "docker-desktop"
                 "ghostty"
                 "graalvm-jdk@21"
                 "linearmouse"
