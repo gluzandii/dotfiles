@@ -1,5 +1,8 @@
 *
 !.gitignore
+!.zshrc
+!.zshenv
+!.stow-local-ignore
 
 !.config/
 
