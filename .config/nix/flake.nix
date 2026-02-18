@@ -31,6 +31,7 @@
           pkgs.podman-compose
 
           pkgs.mkalias
+          pkgs.claude-code
           pkgs.neovim
           pkgs.dust
           pkgs.bat
