@@ -6,9 +6,6 @@
 
 !.config/
 
-!.config/lvim
-!.config/lvim/**
-
 !.config/nvim
 !.config/nvim/**
 
