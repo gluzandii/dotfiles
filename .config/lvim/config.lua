@@ -5,16 +5,6 @@
 -- Discord: https://discord.com/invite/Xb9B4Ny
 lvim.colorscheme = "habamax"
 
--- Make LuaRocks modules visible to Neovim/LuaJIT (macOS)
-local _, _ = pcall(function()
-  local home = os.getenv("HOME")
-  package.path = package.path
-    .. ";" .. home .. "/.luarocks/share/lua/5.1/?.lua"
-    .. ";" .. home .. "/.luarocks/share/lua/5.1/?/init.lua"
-  package.cpath = package.cpath
-    .. ";" .. home .. "/.luarocks/lib/lua/5.1/?.so"
-end)
-
 vim.opt.number = true
 vim.opt.relativenumber = true
 
@@ -29,15 +19,7 @@ table.insert(lvim.plugins, {
 })
 
 
-table.insert(lvim.plugins, require("my-plugins.copilot"))
-table.insert(lvim.plugins, require("my-plugins.copilot-cmp"))
-table.insert(lvim.plugins, require("my-plugins.avante"))
-table.insert(lvim.plugins, require("my-plugins.multicursor"))
-
-require("my-config.copilot-cmp")
-
 vim.opt.autoread = true
-
 -- Trigger autoread when the buffer is entered or the cursor moves
 vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
   command = "if mode() != 'c' | checktime | endif",

@@ -1,2 +1,4 @@
 ^.zshrc$
 ^.zshenv$
+^.gitignore$
+^.git$

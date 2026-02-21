@@ -104,4 +104,3 @@ $env.config.keybindings = [
 ]
 alias less = bat
 alias cat  = bat --paging=never
-alias nvim = lvim
