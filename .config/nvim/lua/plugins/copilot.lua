@@ -4,16 +4,9 @@ return {
     cmd = "Copilot",
     event = "InsertEnter",
     opts = {
-      suggestion = {
-        enabled = true,
-        auto_trigger = true,
-        keymap = {
-          accept = "<Tab>",
-          next = "<M-]>",
-          prev = "<M-[>",
-          dismiss = "<C-]>",
-        },
-      },
+      -- Disable Copilot's inline suggestions so it does NOT hijack <Tab>.
+      -- We'll use Copilot via the completion menu (blink) instead.
+      suggestion = { enabled = false },
       panel = { enabled = false },
     },
   },

@@ -10,3 +10,8 @@ vim.opt.expandtab = true   -- convert tabs to spaces
 vim.opt.smartindent = true -- smarter autoindent
 
 vim.opt.autoread = true
+
+-- set to `true` to follow the main branch
+-- you need to have a working rust toolchain to build the plugin
+-- in this case.
+vim.g.lazyvim_blink_main = true
