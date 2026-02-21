@@ -9,6 +9,9 @@
 !.config/lvim
 !.config/lvim/**
 
+!.config/nvim
+!.config/nvim/**
+
 !.config/nushell
 !.config/nushell/**
 
