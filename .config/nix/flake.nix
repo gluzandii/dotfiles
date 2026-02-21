@@ -32,7 +32,6 @@
 
           pkgs.mkalias
           pkgs.claude-code
-          pkgs.neovim
           pkgs.dust
           pkgs.bat
           pkgs.gh
@@ -79,6 +78,7 @@
                 "luarocks"
                 "icarus-verilog"
                 "mas"
+		"neovim"
             ];
             masApps = {
                 "WhatsApp Messenger" = 310633997;
