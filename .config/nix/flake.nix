@@ -123,6 +123,7 @@ in
         dock.persistent-apps = [
             "/System/Applications/Phone.app"
             "/Applications/Safari.app"
+            "/System/Applications/Messages.app"
             "/Applications/WhatsApp.app"
             "/Applications/Signal.app"
             "/System/Applications/Reminders.app"
