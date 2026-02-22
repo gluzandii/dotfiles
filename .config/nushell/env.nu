@@ -8,3 +8,6 @@ $env.PATH = (
   | prepend '/nix/var/nix/profiles/default/bin'
   | prepend ($env.HOME + '/.nix-profile/bin')
 )
+
+# $env.ANTHROPIC_BASE_URL = "http://localhost:1234"
+# $env.ANTHROPIC_API_KEY = "lmstudio"

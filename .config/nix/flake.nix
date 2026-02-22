@@ -31,7 +31,7 @@
           pkgs.podman-compose
 
           pkgs.mkalias
-          pkgs.claude-code
+          # pkgs.claude-code
           pkgs.dust
           pkgs.bat
           pkgs.gh
@@ -55,6 +55,7 @@
           pkgs.lazygit
           pkgs.codex
           pkgs.starship
+          pkgs.zellij
         ];
 
         homebrew = {
@@ -70,6 +71,7 @@
                 "nordvpn"
                 "signal"
                 "visual-studio-code"
+                "copilot-cli"
             ];
             brews = [
                 "supabase"
@@ -78,7 +80,8 @@
                 "luarocks"
                 "icarus-verilog"
                 "mas"
-		"neovim"
+		        "neovim"
+
             ];
             masApps = {
                 "WhatsApp Messenger" = 310633997;
