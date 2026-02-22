@@ -31,7 +31,7 @@
           pkgs.podman-compose
 
           pkgs.mkalias
-          # pkgs.claude-code
+          pkgs.claude-code
           pkgs.dust
           pkgs.bat
           pkgs.gh
