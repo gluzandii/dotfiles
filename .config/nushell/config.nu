@@ -31,7 +31,7 @@ $env.CGO_LDFLAGS = (llvm-config --ldflags | str trim)
 
 # 2. Pkg Config
 # We use string interpolation to insert the brew path safely
-$env.PKG_CONFIG_PATH = $"((brew --prefix llvm@18 | str trim))/lib/pkgconfig"
+# $env.PKG_CONFIG_PATH = $"((brew --prefix llvm@18 | str trim))/lib/pkgconfig"
 
 # 3. LLVM_SYS Prefix
 # Crucial: For LLVM 18.1.8, the crate looks for '180'
@@ -74,7 +74,7 @@ path-add "/Users/sushi/.local/bin"
 path-add "/usr/local/bin"
 
 $env.config.edit_mode = "vi"
-$env.config.buffer_editor = "/Users/sushi/.local/bin/lvim"
+$env.config.buffer_editor = "nvim"
 $env.config.show_banner = false
 $env.RAVEDUDE_PORT = "/dev/cu.usbmodem2101"
 

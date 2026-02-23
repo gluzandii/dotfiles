@@ -17,7 +17,7 @@ return {
         ["<C-j>"] = { "select_next", "fallback" },
         ["<C-k>"] = { "select_prev", "fallback" },
         ["<CR>"] = { "accept", "fallback" },
-        ["<Esc>"] = { "hide", "fallback" },
+        -- ["<Esc>"] = { "hide", "fallback" },
       },
       sources = {
         default = { "lsp", "path", "snippets", "buffer", "copilot" },

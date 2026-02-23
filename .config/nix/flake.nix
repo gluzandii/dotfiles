@@ -81,7 +81,7 @@
                 "icarus-verilog"
                 "mas"
 		        "neovim"
-
+                "openssl@3"
             ];
             masApps = {
                 "WhatsApp Messenger" = 310633997;
