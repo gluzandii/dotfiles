@@ -19,13 +19,13 @@
         [ 
           pkgs.aldente
           pkgs.brave
-          pkgs.chatgpt
+          # pkgs.chatgpt
           pkgs.gitkraken
           pkgs.iina
           pkgs.jetbrains-toolbox
           pkgs.postman
           pkgs.raycast
-          pkgs.spotify
+          # pkgs.spotify
           pkgs.podman
           pkgs.podman-desktop
           pkgs.podman-compose
@@ -62,6 +62,7 @@
             enable = true;
             casks = [
                 "aldente"
+                "spotify"
                 "chatgpt"
                 "ghostty"
                 "graalvm-jdk@21"
@@ -132,7 +133,7 @@ in
             "/System/Applications/Reminders.app"
             "/System/Applications/Mail.app"
             "/System/Applications/iPhone Mirroring.app"
-            "${pkgs.chatgpt}/Applications/ChatGPT.app"
+            "/Applications/ChatGPT.app"
             "/Applications/Ghostty.app"
         ];
         finder.FXPreferredViewStyle = "clmv";
