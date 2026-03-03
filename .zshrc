@@ -136,10 +136,10 @@ eval "$(zoxide init --cmd cd zsh)"
 
 # bun completions
 [ -s "/Users/sushi/.bun/_bun" ] && source "/Users/sushi/.bun/_bun"
-export PATH="/opt/homebrew/opt/llvm@18/bin:$PATH"
-export LDFLAGS=-L/opt/homebrew/opt/llvm@18/lib
-export CPPFLAGS=-I/opt/homebrew/opt/llvm@18/include
-export CMAKE_PREFIX_PATH=/opt/homebrew/opt/llvm@18
+#export PATH="/opt/homebrew/opt/llvm@18/bin:$PATH"
+#export LDFLAGS=-L/opt/homebrew/opt/llvm@18/lib
+#export CPPFLAGS=-I/opt/homebrew/opt/llvm@18/include
+#export CMAKE_PREFIX_PATH=/opt/homebrew/opt/llvm@18
 export RAVEDUDE_PORT=/dev/cu.usbmodem2101
 
 alias cat="bat --paging=never"
@@ -147,16 +147,16 @@ alias less=bat
 alias grep=rg
 
 # 4. CGO Flags (Dynamic evaluation)
-export CGO_CFLAGS="$(llvm-config --cflags)"
-export CGO_LDFLAGS="$(llvm-config --ldflags)"
+# export CGO_CFLAGS="$(llvm-config --cflags)"
+# export CGO_LDFLAGS="$(llvm-config --ldflags)"
 
-# 5. Pkg Config
-export PKG_CONFIG_PATH="$(brew --prefix llvm@18)/lib/pkgconfig"
+# # 5. Pkg Config
+# export PKG_CONFIG_PATH="$(brew --prefix llvm@18)/lib/pkgconfig"
 
-# 6. LLVM_SYS Prefix (Targeting LLVM 18.x)
-export LLVM_SYS_180_PREFIX="$(llvm-config --prefix)"
+# # 6. LLVM_SYS Prefix (Targeting LLVM 18.x)
+# export LLVM_SYS_180_PREFIX="$(llvm-config --prefix)"
 
-export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+# export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 export PATH="/Users/sushi/.local/bin:$PATH"
 
 export PATH="$PATH:$(go env GOPATH)/bin"

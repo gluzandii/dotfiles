@@ -56,6 +56,7 @@
           pkgs.codex
           pkgs.starship
           pkgs.zellij
+          pkgs.pnpm
         ];
 
         homebrew = {
@@ -73,10 +74,13 @@
                 "signal"
                 "visual-studio-code"
                 "copilot-cli"
+                "claude"
+                "figma"
             ];
             brews = [
                 "supabase"
-                "llvm@18"
+                "llvm@20"
+                "zig" 
                 "lua"
                 "luarocks"
                 "icarus-verilog"
@@ -134,6 +138,7 @@ in
             "/System/Applications/Mail.app"
             "/System/Applications/iPhone Mirroring.app"
             "/Applications/ChatGPT.app"
+            "/Applications/Claude.app"
             "/Applications/Ghostty.app"
         ];
         finder.FXPreferredViewStyle = "clmv";
