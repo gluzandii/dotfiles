@@ -13,16 +13,18 @@ def --env path-add [p: string] {
 }
 
 # Homebrew LLVM
-# path-add "/opt/homebrew/opt/llvm@18/bin"
+# path-add "/opt/homebrew/opt/llvm@20/bin"
 path-add "/opt/homebrew/bin"
 path-add "/Users/sushi/.cargo/bin"
 
+# path-add "/opt/homebrew/opt/lld@20/bin"
+
 # Set Linker and Compiler Flags
-# $env.LDFLAGS = '-L/opt/homebrew/opt/llvm@18/lib'
-# $env.CPPFLAGS = '-I/opt/homebrew/opt/llvm@18/include'
+# $env.LDFLAGS = '-L/opt/homebrew/opt/llvm@20/lib'
+# $env.CPPFLAGS = '-I/opt/homebrew/opt/llvm@20/include'
 
 # # Set CMake Prefix Path
-# $env.CMAKE_PREFIX_PATH = '/opt/homebrew/opt/llvm@18'
+# $env.CMAKE_PREFIX_PATH = '/opt/homebrew/opt/llvm@20'
 
 # 1. CGO Flags
 # We run llvm-config and trim the trailing newline
@@ -31,11 +33,11 @@ path-add "/Users/sushi/.cargo/bin"
 
 # 2. Pkg Config
 # We use string interpolation to insert the brew path safely
-# $env.PKG_CONFIG_PATH = $"((brew --prefix llvm@18 | str trim))/lib/pkgconfig"
+# $env.PKG_CONFIG_PATH = $"((brew --prefix llvm@20 | str trim))/lib/pkgconfig"
 
 # 3. LLVM_SYS Prefix
 # Crucial: For LLVM 18.1.8, the crate looks for '180'
-# $env.LLVM_SYS_180_PREFIX = (llvm-config --prefix | str trim)
+# $env.LLVM_SYS_200_PREFIX = (llvm-config --prefix | str trim)
 
 
 

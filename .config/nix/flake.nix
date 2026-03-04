@@ -19,13 +19,10 @@
         [ 
           pkgs.aldente
           pkgs.brave
-          # pkgs.chatgpt
           pkgs.gitkraken
           pkgs.iina
-          pkgs.jetbrains-toolbox
           pkgs.postman
           pkgs.raycast
-          # pkgs.spotify
           pkgs.podman
           pkgs.podman-desktop
           pkgs.podman-compose
@@ -76,12 +73,9 @@
                 "copilot-cli"
                 "claude"
                 "figma"
+                "jetbrains-toolbox"
             ];
             brews = [
-                "supabase"
-                "llvm@20"
-                "zig" 
-                "lua"
                 "luarocks"
                 "icarus-verilog"
                 "mas"
