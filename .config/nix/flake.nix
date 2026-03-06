@@ -54,6 +54,7 @@
           pkgs.starship
           pkgs.zellij
           pkgs.pnpm
+          pkgs.nmap
         ];
 
         homebrew = {
@@ -81,6 +82,7 @@
                 "mas"
 		        "neovim"
                 "openssl@3"
+                "worktrunk"
             ];
             masApps = {
                 "WhatsApp Messenger" = 310633997;
