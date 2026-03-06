@@ -81,6 +81,7 @@ $env.config.show_banner = false
 $env.RAVEDUDE_PORT = "/dev/cu.usbmodem2101"
 
 source ./carapace/init.nu
+source ./worktrunk/wt.nu
 
 use ./starship/init.nu
 
