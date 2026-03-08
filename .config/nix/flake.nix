@@ -63,7 +63,6 @@
             casks = [
                 "aldente"
                 "spotify"
-                "chatgpt"
                 "ghostty"
                 "graalvm-jdk@21"
                 "linearmouse"
@@ -134,7 +133,6 @@ in
             "/System/Applications/Reminders.app"
             "/System/Applications/Mail.app"
             "/System/Applications/iPhone Mirroring.app"
-            "/Applications/ChatGPT.app"
             "/Applications/Claude.app"
             "/Applications/Ghostty.app"
         ];
