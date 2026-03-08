@@ -55,6 +55,7 @@
           pkgs.zellij
           pkgs.pnpm
           pkgs.nmap
+          pkgs.helix
         ];
 
         homebrew = {
