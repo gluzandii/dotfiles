@@ -55,12 +55,12 @@
           pkgs.zellij
           pkgs.pnpm
           pkgs.nmap
-          pkgs.helix
         ];
 
         homebrew = {
             enable = true;
             casks = [
+                "wispr-flow"
                 "aldente"
                 "spotify"
                 "ghostty"
