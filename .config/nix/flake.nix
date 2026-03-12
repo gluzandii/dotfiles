@@ -35,7 +35,6 @@
           pkgs.bun
           pkgs.btop
           pkgs.fd
-          pkgs.fzf
           pkgs.ffmpeg
           pkgs.ghostscript
           pkgs.carapace
@@ -50,7 +49,6 @@
           pkgs.surfer
           pkgs.zoxide
           pkgs.lazygit
-          pkgs.codex
           pkgs.starship
           pkgs.zellij
           pkgs.pnpm
@@ -83,6 +81,7 @@
 		        "neovim"
                 "openssl@3"
                 "worktrunk"
+                "sk"
             ];
             masApps = {
                 "WhatsApp Messenger" = 310633997;
