@@ -18,7 +18,6 @@
       environment.systemPackages =
         [ 
           pkgs.aldente
-          pkgs.brave
           pkgs.gitkraken
           pkgs.iina
           pkgs.postman
@@ -36,8 +35,9 @@
           pkgs.btop
           pkgs.fd
           pkgs.ffmpeg
-          pkgs.ghostscript
           pkgs.carapace
+          pkgs.qpdf
+          pkgs.imagemagick
           pkgs.gemini-cli
           pkgs.go
           pkgs.delta
@@ -49,6 +49,7 @@
           pkgs.surfer
           pkgs.zoxide
           pkgs.lazygit
+          pkgs.gitui
           pkgs.starship
           pkgs.zellij
           pkgs.pnpm
@@ -59,6 +60,7 @@
             enable = true;
             casks = [
                 "wispr-flow"
+                "brave-browser"
                 "aldente"
                 "spotify"
                 "ghostty"
