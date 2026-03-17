@@ -19,7 +19,6 @@
         [ 
           pkgs.aldente
           pkgs.gitkraken
-          pkgs.iina
           pkgs.postman
           pkgs.raycast
           pkgs.podman
@@ -54,12 +53,14 @@
           pkgs.zellij
           pkgs.pnpm
           pkgs.nmap
+          pkgs.zig
         ];
 
         homebrew = {
             enable = true;
             casks = [
                 "wispr-flow"
+                "obs"
                 "brave-browser"
                 "aldente"
                 "spotify"
