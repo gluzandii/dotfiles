@@ -53,13 +53,12 @@
           pkgs.zellij
           pkgs.pnpm
           pkgs.nmap
-          pkgs.zig
         ];
 
         homebrew = {
             enable = true;
             casks = [
-                "wispr-flow"
+                "zed"
                 "obs"
                 "brave-browser"
                 "aldente"
