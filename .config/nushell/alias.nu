@@ -16,4 +16,7 @@ alias gca = git commit --amend
 alias gsw = git switch
 alias gss = git stash
 alias gwt = git worktree
-
+alias gd = git diff
+alias gr = git restore
+alias gu = git undo
+alias g = git

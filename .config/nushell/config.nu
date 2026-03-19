@@ -106,3 +106,25 @@ $env.config.keybindings = [
     event: { edit: cutfromstart }
   }
 ]
+
+let carapace_completer = {|spans: list<string>|
+    CARAPACE_LENIENT=1 carapace $spans.0 nushell ...$spans | from json
+}
+
+# Save carapace init next to this file, inside ./carapace/
+# carapace _carapace nushell | save --force (path join $carapace_dir "test.nu")
+
+
+$env.config = {
+    completions: {
+        case_sensitive: false
+        quick: true
+        partial: true
+        algorithm: "fuzzy"
+        external: {
+            enable: true
+            max_results: 100
+            completer: $carapace_completer
+        }
+    }
+}
