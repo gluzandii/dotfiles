@@ -58,6 +58,8 @@
         homebrew = {
             enable = true;
             casks = [
+                "antigravity"
+                "wispr-flow"
                 "zed"
                 "obs"
                 "brave-browser"
