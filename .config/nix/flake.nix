@@ -12,15 +12,6 @@
   let
     configuration = { pkgs, config, ... }: {
       system.primaryUser = "sushi";
-                system.activationScripts.nushellCompletions.text = ''
-  if [ -d "/run/current-system/sw/share/nushell" ]; then
-    find /run/current-system/sw/share/nushell -name "*.nu" \
-      | sed 's/^/source /' \
-      > /etc/nushell/nix-completions.nu
-  else
-    echo "" > /etc/nushell/nix-completions.nu
-  fi
-'';
       nixpkgs.config.allowUnfree = true;
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
@@ -69,6 +60,10 @@
           pkgs.tmux
           pkgs.yazi
           pkgs.skim
+          pkgs.luarocks
+          pkgs.worktrunk
+          pkgs.neovim
+          pkgs.mas
         ];
 
         homebrew = {
@@ -95,12 +90,8 @@
                 "jetbrains-toolbox"
             ];
             brews = [
-                "luarocks"
                 "icarus-verilog"
-                "mas"
-		        "neovim"
                 "openssl@3"
-                "worktrunk"
             ];
             masApps = {
                 "WhatsApp Messenger" = 310633997;
