@@ -128,3 +128,17 @@ $env.config = {
         }
     }
 }
+
+# in config.nu
+$env.NU_LIB_DIRS = [
+  "/run/current-system/sw/share/nushell/vendor/autoload"
+]
+
+# run this once in terminal to generate a loader
+
+glob /run/current-system/sw/share/nushell/vendor/autoload/**/*.nu
+| each { |f| $"source ($f)" }
+| str join "\n"
+| save -f ~/.config/nushell/nix-completions.nu
+
+source ./nix-completions.nu

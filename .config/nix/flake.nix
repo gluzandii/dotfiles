@@ -12,9 +12,22 @@
   let
     configuration = { pkgs, config, ... }: {
       system.primaryUser = "sushi";
+                system.activationScripts.nushellCompletions.text = ''
+  if [ -d "/run/current-system/sw/share/nushell" ]; then
+    find /run/current-system/sw/share/nushell -name "*.nu" \
+      | sed 's/^/source /' \
+      > /etc/nushell/nix-completions.nu
+  else
+    echo "" > /etc/nushell/nix-completions.nu
+  fi
+'';
       nixpkgs.config.allowUnfree = true;
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
+    environment.pathsToLink = [
+        "/share/nushell"
+        "/share/zsh"
+    ];
       environment.systemPackages =
         [ 
           pkgs.aldente
@@ -53,6 +66,9 @@
           pkgs.pnpm
           pkgs.nmap
           pkgs.lsd
+          pkgs.tmux
+          pkgs.yazi
+          pkgs.skim
         ];
 
         homebrew = {
@@ -85,7 +101,6 @@
 		        "neovim"
                 "openssl@3"
                 "worktrunk"
-                "sk"
             ];
             masApps = {
                 "WhatsApp Messenger" = 310633997;

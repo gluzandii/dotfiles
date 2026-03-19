@@ -1,4 +1,4 @@
-$env.CARAPACE_BRIDGES = 'zsh'
+$env.CARAPACE_BRIDGES = "zsh,fish,bash"
 
 # Add Nix to PATH
 $env.PATH = (

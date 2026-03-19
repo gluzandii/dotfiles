@@ -20,3 +20,5 @@ alias gd = git diff
 alias gr = git restore
 alias gu = git undo
 alias g = git
+
+alias fzf = sk

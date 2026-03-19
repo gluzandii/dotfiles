@@ -1,0 +1,1 @@
+source /run/current-system/sw/share/nushell/vendor/autoload/yazi.nu
