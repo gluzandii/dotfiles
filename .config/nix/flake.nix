@@ -48,7 +48,6 @@
           pkgs.surfer
           pkgs.zoxide
           pkgs.lazygit
-          pkgs.gitui
           pkgs.starship
           pkgs.zellij
           pkgs.pnpm
