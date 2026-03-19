@@ -88,6 +88,7 @@ use ./starship/init.nu
 source ./zoxide/init.nu
 
 source ./completions/zellij.nu
+source ./alias.nu
 
 $env.config.keybindings = [
   {
@@ -105,5 +106,3 @@ $env.config.keybindings = [
     event: { edit: cutfromstart }
   }
 ]
-# alias less = bat
-alias cat  = bat --paging=never
