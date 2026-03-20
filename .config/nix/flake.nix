@@ -59,11 +59,11 @@
           pkgs.lsd
           pkgs.tmux
           pkgs.yazi
-          pkgs.skim
           pkgs.luarocks
           pkgs.worktrunk
           pkgs.neovim
           pkgs.mas
+          pkgs.television
         ];
 
         homebrew = {
