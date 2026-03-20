@@ -13,6 +13,15 @@
 !.config/nushell/**
 
 
+!.config/television
+!.config/television/**
+
+
+!.config/zed
+!.config/zed/themes
+!.config/zed/settings.json
+
+
 !.config/zellij
 !.config/zellij/**
 
@@ -26,4 +35,3 @@
 
 !.config/gh
 !.config/gh/**
-

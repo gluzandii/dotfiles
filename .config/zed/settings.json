@@ -1,0 +1,44 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "terminal": {
+    "cursor_shape": "bar"
+  },
+  "diagnostics": {
+    "inline": {
+      "enabled": true
+    }
+  },
+  "prettier": {
+    "allowed": true
+  },
+  "which_key": {
+    "enabled": true
+  },
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 900
+    }
+  },
+  "agent_ui_font_size": 19.0,
+  "ui_font_family": ".ZedSans",
+  "icon_theme": "Catppuccin Mocha",
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "redact_private_values": true,
+  "when_closing_with_no_tabs": "platform_default",
+  "buffer_font_family": "Lilex Nerd Font",
+  "vim_mode": true,
+  "use_system_path_prompts": true,
+  "ui_font_size": 18,
+  "buffer_font_size": 22,
+  "theme": "Tokyo Night",
+}

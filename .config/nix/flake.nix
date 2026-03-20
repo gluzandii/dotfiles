@@ -64,6 +64,7 @@
           pkgs.neovim
           pkgs.mas
           pkgs.television
+          pkgs.tldr
         ];
 
         homebrew = {

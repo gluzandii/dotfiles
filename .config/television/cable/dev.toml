@@ -1,0 +1,23 @@
+[metadata]
+name = "dev"
+description = "To select from directories inside ~/Dev"
+requirements = ["fd"]
+
+[source]
+command = ["fd -t d . ~/Dev", "fd -t d --hidden . ~/Dev"]
+
+[preview]
+command = "ls '{}'"
+
+[keybindings]
+ctrl-e = "actions:cd"
+
+[actions.cd]
+description = "Open a shell in the selected directory"
+command = "cd {};"
+mode = "execute"
+
+[actions.goto_parent_dir]
+description = "Re-opens tv in the parent directory"
+command = "tv dev_folder .."
+mode = "execute"
