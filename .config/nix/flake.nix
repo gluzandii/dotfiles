@@ -42,7 +42,6 @@
           pkgs.qpdf
           pkgs.imagemagick
           pkgs.gemini-cli
-          pkgs.go
           pkgs.delta
           pkgs.lua
           pkgs.nodejs
@@ -57,7 +56,6 @@
           pkgs.pnpm
           pkgs.nmap
           pkgs.lsd
-          pkgs.tmux
           pkgs.yazi
           pkgs.luarocks
           pkgs.worktrunk
@@ -93,6 +91,7 @@
             brews = [
                 "icarus-verilog"
                 "openssl@3"
+                "go"
             ];
             masApps = {
                 "WhatsApp Messenger" = 310633997;
@@ -145,6 +144,7 @@ in
             "/System/Applications/iPhone Mirroring.app"
             "/Applications/Claude.app"
             "/Applications/Ghostty.app"
+            "/Applications/Wispr Flow.app"
         ];
         finder.FXPreferredViewStyle = "clmv";
         loginwindow.GuestEnabled = false;
