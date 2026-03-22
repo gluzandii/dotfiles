@@ -13,145 +13,148 @@
     configuration = { pkgs, config, ... }: {
       system.primaryUser = "sushi";
       nixpkgs.config.allowUnfree = true;
+
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
-    environment.pathsToLink = [
+      environment.pathsToLink = [
         "/share/nushell"
         "/share/zsh"
-    ];
-      environment.systemPackages =
-        [ 
-          pkgs.aldente
-          pkgs.gitkraken
-          pkgs.postman
-          pkgs.raycast
-          pkgs.podman
-          pkgs.podman-desktop
-          pkgs.podman-compose
-
-          pkgs.mkalias
-          pkgs.claude-code
-          pkgs.dust
-          pkgs.bat
-          pkgs.gh
-          pkgs.bun
-          pkgs.btop
-          pkgs.fd
-          pkgs.ffmpeg
-          pkgs.carapace
-          pkgs.qpdf
-          pkgs.imagemagick
-          pkgs.gemini-cli
-          pkgs.delta
-          pkgs.lua
-          pkgs.nodejs
-          pkgs.nushell
-          pkgs.ripgrep
-          pkgs.stow
-          pkgs.surfer
-          pkgs.zoxide
-          pkgs.lazygit
-          pkgs.starship
-          pkgs.zellij
-          pkgs.pnpm
-          pkgs.nmap
-          pkgs.lsd
-          pkgs.yazi
-          pkgs.luarocks
-          pkgs.worktrunk
-          pkgs.neovim
-          pkgs.mas
-          pkgs.television
-          pkgs.tldr
-        ];
-
-        homebrew = {
-            enable = true;
-            casks = [
-                "antigravity"
-                "wispr-flow"
-                "zed"
-                "obs"
-                "brave-browser"
-                "aldente"
-                "spotify"
-                "ghostty"
-                "graalvm-jdk@21"
-                "linearmouse"
-                "lm-studio"
-                "minecraft"
-                "nordvpn"
-                "signal"
-                "visual-studio-code"
-                "copilot-cli"
-                "claude"
-                "figma"
-                "jetbrains-toolbox"
-            ];
-            brews = [
-                "icarus-verilog"
-                "openssl@3"
-                "go"
-            ];
-            masApps = {
-                "WhatsApp Messenger" = 310633997;
-                "Goodnotes: AI Notes, Docs, PDF" = 1444383602;
-                "Microsoft Word" = 462054704;
-                "Microsoft Excel" = 462058435;
-                "Microsoft PowerPoint" = 462062816;
-                "Xcode" = 497799835;
-            };
-            onActivation.cleanup = "zap";
-            onActivation.autoUpdate = true;
-            onActivation.upgrade = true;
-        };
-
-      fonts.packages = [
-        pkgs.lilex 
-        pkgs.nerd-fonts.lilex 
       ];
 
-      
-system.activationScripts.applications.text = let
-  env = pkgs.buildEnv {
-    name = "system-applications";
-    paths = config.environment.systemPackages;
-    pathsToLink = ["/Applications"];
-  };
-in
-  pkgs.lib.mkForce ''
-  # Set up applications.
-  echo "setting up /Applications..." >&2
-  rm -rf /Applications/Nix\ Apps
-  mkdir -p /Applications/Nix\ Apps
-  find ${env}/Applications -maxdepth 1 -type l -exec readlink '{}' + |
-  while read -r src; do
-    app_name=$(basename "$src")
-    echo "copying $src" >&2
-    ${pkgs.mkalias}/bin/mkalias "$src" "/Applications/Nix Apps/$app_name"
-  done
-      '';
+      environment.systemPackages = [
+        pkgs.aldente
+        pkgs.gitkraken
+        pkgs.postman
+        pkgs.raycast
+        pkgs.podman
+        pkgs.podman-desktop
+        pkgs.podman-compose
+
+        pkgs.mkalias
+        pkgs.nil
+        pkgs.nixd
+        pkgs.claude-code
+        pkgs.dust
+        pkgs.bat
+        pkgs.gh
+        pkgs.bun
+        pkgs.btop
+        pkgs.fd
+        pkgs.ffmpeg
+        pkgs.carapace
+        pkgs.qpdf
+        pkgs.imagemagick
+        pkgs.gemini-cli
+        pkgs.delta
+        pkgs.lua
+        pkgs.nodejs
+        pkgs.nushell
+        pkgs.ripgrep
+        pkgs.stow
+        pkgs.surfer
+        pkgs.zoxide
+        pkgs.lazygit
+        pkgs.starship
+        pkgs.zellij
+        pkgs.pnpm
+        pkgs.nmap
+        pkgs.lsd
+        pkgs.yazi
+        pkgs.luarocks
+        pkgs.worktrunk
+        pkgs.neovim
+        pkgs.mas
+        pkgs.television
+        pkgs.tldr
+        pkgs.sccache
+      ];
+
+      homebrew = {
+        enable = true;
+        casks = [
+          "antigravity"
+          "wispr-flow"
+          "zed"
+          "obs"
+          "brave-browser"
+          "aldente"
+          "spotify"
+          "ghostty"
+          "graalvm-jdk@21"
+          "linearmouse"
+          "lm-studio"
+          "minecraft"
+          "nordvpn"
+          "signal"
+          "visual-studio-code"
+          "copilot-cli"
+          "claude"
+          "figma"
+          "jetbrains-toolbox"
+        ];
+        brews = [
+          "icarus-verilog"
+          "openssl@3"
+          "go"
+        ];
+        masApps = {
+          "WhatsApp Messenger" = 310633997;
+          "Goodnotes: AI Notes, Docs, PDF" = 1444383602;
+          "Microsoft Word" = 462054704;
+          "Microsoft Excel" = 462058435;
+          "Microsoft PowerPoint" = 462062816;
+          "Xcode" = 497799835;
+        };
+        onActivation.cleanup = "zap";
+        onActivation.autoUpdate = true;
+        onActivation.upgrade = true;
+      };
+
+      fonts.packages = [
+        pkgs.lilex
+        pkgs.nerd-fonts.lilex
+      ];
+
+      system.activationScripts.applications.text =
+        let
+          env = pkgs.buildEnv {
+            name = "system-applications";
+            paths = config.environment.systemPackages;
+            pathsToLink = [ "/Applications" ];
+          };
+        in
+        pkgs.lib.mkForce ''
+          # Set up applications.
+          echo "setting up /Applications..." >&2
+          rm -rf /Applications/Nix\ Apps
+          mkdir -p /Applications/Nix\ Apps
+          find ${env}/Applications -maxdepth 1 -type l -exec readlink '{}' + |
+          while read -r src; do
+            app_name=$(basename "$src")
+            echo "copying $src" >&2
+            ${pkgs.mkalias}/bin/mkalias "$src" "/Applications/Nix Apps/$app_name"
+          done
+        '';
 
       system.defaults = {
         dock.persistent-apps = [
-            "/System/Applications/Phone.app"
-            "/Applications/Safari.app"
-            "/System/Applications/Messages.app"
-            "/Applications/WhatsApp.app"
-            "/Applications/Signal.app"
-            "/System/Applications/Reminders.app"
-            "/System/Applications/Mail.app"
-            "/System/Applications/iPhone Mirroring.app"
-            "/Applications/Claude.app"
-            "/Applications/Ghostty.app"
-            "/Applications/Wispr Flow.app"
+          "/System/Applications/Phone.app"
+          "/Applications/Safari.app"
+          "/System/Applications/Messages.app"
+          "/Applications/WhatsApp.app"
+          "/Applications/Signal.app"
+          "/System/Applications/Reminders.app"
+          "/System/Applications/Mail.app"
+          "/System/Applications/iPhone Mirroring.app"
+          "/Applications/Claude.app"
+          "/Applications/Ghostty.app"
+          "/Applications/Wispr Flow.app"
         ];
         finder.FXPreferredViewStyle = "clmv";
         loginwindow.GuestEnabled = false;
         NSGlobalDomain.AppleInterfaceStyle = "Dark";
         NSGlobalDomain.KeyRepeat = 2;
       };
-
 
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
@@ -174,18 +177,18 @@ in
     # Build darwin flake using:
     # $ darwin-rebuild build --flake .#simple
     darwinConfigurations."sushi-mac" = nix-darwin.lib.darwinSystem {
-      modules = [ 
-        configuration 
+      modules = [
+        configuration
         nix-homebrew.darwinModules.nix-homebrew
         {
-            nix-homebrew = {
-                enable = true;
-                enableRosetta = true;
-                user = "sushi";
-                autoMigrate = true;
-            };
+          nix-homebrew = {
+            enable = true;
+            enableRosetta = true;
+            user = "sushi";
+            autoMigrate = true;
+          };
         }
-    ];
+      ];
     };
 
     darwinPackages = self.darwinConfigurations."sushi-mac".packages;

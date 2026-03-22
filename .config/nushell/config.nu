@@ -143,3 +143,4 @@ glob /run/current-system/sw/share/nushell/vendor/autoload/**/*.nu
 
 source ./nix-completions.nu
 source ./television/tv.nu
+source "~/.cargo/env.nu"

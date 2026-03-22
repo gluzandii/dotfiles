@@ -1,4 +1,7 @@
 $env.CARAPACE_BRIDGES = "zsh,fish,bash"
+$env.RUSTC_WRAPPER = "sccache"
+
+$env.SCCACHE_CACHE_SIZE = "10G"  # Set maximum cache size
 
 # Add Nix to PATH
 $env.PATH = (
