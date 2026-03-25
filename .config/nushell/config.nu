@@ -16,6 +16,7 @@ def --env path-add [p: string] {
 # path-add "/opt/homebrew/opt/llvm@20/bin"
 path-add "/opt/homebrew/bin"
 path-add "/Users/sushi/.cargo/bin"
+path-add "/Users/sushi/.bun/bin"
 
 # path-add "/opt/homebrew/opt/lld@20/bin"
 
