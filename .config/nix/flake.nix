@@ -67,6 +67,8 @@
         pkgs.television
         pkgs.tldr
         pkgs.sccache
+        pkgs.ngspice
+        pkgs.gnuplot
       ];
 
       homebrew = {
