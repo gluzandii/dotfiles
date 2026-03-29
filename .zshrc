@@ -8,6 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 export RUSTC_WRAPPER=sccache
 export SCCACHE_CACHE_SIZE="10G"  # Set maximum cache size
+export HOMEBREW_NO_ANALYTICS=1
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,

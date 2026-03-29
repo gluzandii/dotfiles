@@ -1,5 +1,6 @@
 $env.CARAPACE_BRIDGES = "zsh,fish,bash"
 $env.RUSTC_WRAPPER = "sccache"
+$env.HOMEBREW_NO_ANALYTICS = 1
 
 $env.SCCACHE_CACHE_SIZE = "10G"  # Set maximum cache size
 
