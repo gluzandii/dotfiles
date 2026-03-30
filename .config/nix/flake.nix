@@ -99,14 +99,14 @@
           "openssl@3"
           "go"
         ];
-        masApps = {
-          "WhatsApp Messenger" = 310633997;
-          "Goodnotes: AI Notes, Docs, PDF" = 1444383602;
-          "Microsoft Word" = 462054704;
-          "Microsoft Excel" = 462058435;
-          "Microsoft PowerPoint" = 462062816;
-          "Xcode" = 497799835;
-        };
+        # masApps = {
+        #   "WhatsApp Messenger" = 310633997;
+        #   "Goodnotes: AI Notes, Docs, PDF" = 1444383602;
+        #   "Microsoft Word" = 462054704;
+        #   "Microsoft Excel" = 462058435;
+        #   "Microsoft PowerPoint" = 462062816;
+        #   "Xcode" = 497799835;
+        # };
         onActivation.cleanup = "zap";
         onActivation.autoUpdate = true;
         onActivation.upgrade = true;
