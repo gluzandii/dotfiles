@@ -69,6 +69,7 @@
         pkgs.sccache
         pkgs.ngspice
         pkgs.gnuplot
+        pkgs.ghostscript
       ];
 
       homebrew = {
