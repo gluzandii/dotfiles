@@ -43,6 +43,8 @@
         pkgs.ffmpeg
         pkgs.carapace
         pkgs.qpdf
+        pkgs.ollama
+        pkgs.pandoc
         pkgs.imagemagick
         pkgs.gemini-cli
         pkgs.delta
@@ -97,6 +99,7 @@
         ];
         brews = [
           "icarus-verilog"
+          "weasyprint"
           "openssl@3"
           "go"
         ];
