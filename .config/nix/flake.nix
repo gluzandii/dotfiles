@@ -43,7 +43,6 @@
         pkgs.ffmpeg
         pkgs.carapace
         pkgs.qpdf
-        pkgs.ollama
         pkgs.pandoc
         pkgs.imagemagick
         pkgs.gemini-cli
@@ -72,6 +71,7 @@
         pkgs.ngspice
         pkgs.gnuplot
         pkgs.ghostscript
+        pkgs.watchexec
       ];
 
       homebrew = {
@@ -102,6 +102,7 @@
           "weasyprint"
           "openssl@3"
           "go"
+          "ollama"
         ];
         # masApps = {
         #   "WhatsApp Messenger" = 310633997;
