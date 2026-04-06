@@ -72,6 +72,7 @@
         pkgs.gnuplot
         pkgs.ghostscript
         pkgs.watchexec
+        pkgs.cmake
       ];
 
       homebrew = {
@@ -103,6 +104,7 @@
           "openssl@3"
           "go"
           "ollama"
+          "openai-whisper"
         ];
         # masApps = {
         #   "WhatsApp Messenger" = 310633997;
