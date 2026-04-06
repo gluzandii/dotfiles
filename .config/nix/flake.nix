@@ -34,6 +34,7 @@
         pkgs.nil
         pkgs.nixd
         pkgs.claude-code
+        pkgs.opencode
         pkgs.dust
         pkgs.bat
         pkgs.gh
@@ -93,7 +94,6 @@
           "nordvpn"
           "signal"
           "visual-studio-code"
-          "copilot-cli"
           "claude"
           "figma"
           "jetbrains-toolbox"
