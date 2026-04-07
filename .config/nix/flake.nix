@@ -105,6 +105,7 @@
           "go"
           "ollama"
           "openai-whisper"
+          "aovestdipaperino/tap/tokensave"
         ];
         # masApps = {
         #   "WhatsApp Messenger" = 310633997;
