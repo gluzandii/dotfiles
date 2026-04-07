@@ -9,6 +9,9 @@
 !.config/nvim
 !.config/nvim/**
 
+!.config/opencode
+!.config/opencode/**
+
 !.config/nushell
 !.config/nushell/**
 
@@ -35,3 +38,4 @@
 
 !.config/gh
 !.config/gh/**
+.tokensave
