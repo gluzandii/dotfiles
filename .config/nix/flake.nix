@@ -74,6 +74,7 @@
         pkgs.ghostscript
         pkgs.watchexec
         pkgs.cmake
+        pkgs.croc
       ];
 
       homebrew = {
